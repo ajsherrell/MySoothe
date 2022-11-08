@@ -1,5 +1,12 @@
 # Basic Layouts in Compose Codelab
 
+### Features
+ - LazyGrid
+ - Slot API
+ - Scaffold
+ - BottomNavigation
+ - SearchBar
+
 This folder contains the source code for
 the [Basic Layouts in Compose Codelab](https://developer.android.com/codelabs/jetpack-compose-layouts)
 

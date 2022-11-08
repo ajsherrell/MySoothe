@@ -41,7 +41,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.modifier.modifierLocalConsumer
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.ui.res.painterResource
 
 class MainActivity : ComponentActivity() {
@@ -203,6 +204,21 @@ fun HomeSection(
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
     // Implement composable here
+    Column(
+        modifier
+            .verticalScroll(rememberScrollState())
+            .padding(vertical = 16.dp)
+    ) {
+        Spacer(modifier = Modifier.height(16.dp))
+        SearchBar(Modifier.padding(horizontal = 16.dp))
+        HomeSection(title = R.string.align_your_body) {
+            AlignYourBodyRow()
+        }
+        HomeSection(title = R.string.favorite_collections) {
+            FavoriteCollectionsGrid()
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+    }
 }
 
 // Step: Bottom navigation - Material
@@ -292,7 +308,7 @@ fun HomeSectionPreview() {
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFFF0EAE2)
+@Preview(showBackground = true, backgroundColor = 0xFFF0EAE2, heightDp = 180)
 @Composable
 fun ScreenContentPreview() {
     MySootheTheme { HomeScreen() }

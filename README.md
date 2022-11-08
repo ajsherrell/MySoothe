@@ -10,6 +10,10 @@
 This folder contains the source code for
 the [Basic Layouts in Compose Codelab](https://developer.android.com/codelabs/jetpack-compose-layouts)
 
+### Image
+
+![MySootheImage](https://user-images.githubusercontent.com/16841620/200668342-cdbc6650-8cea-4ed5-bb69-d8aa24336e30.png)
+
 ## License
 
 ```

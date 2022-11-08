@@ -32,6 +32,8 @@ import androidx.compose.ui.unit.dp
 import com.codelab.basiclayouts.ui.theme.MySootheTheme
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
@@ -139,6 +141,15 @@ fun AlignYourBodyRow(
     modifier: Modifier = Modifier
 ) {
     // Implement composable here
+    LazyRow(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(horizontal = 16.dp)
+    ) {
+        items(alignYourBodyData) { item -> 
+            AlignYourBodyElement(drawable = item.drawable, text = item.text)
+        }
+    }
 }
 
 // Step: Favorite collections grid - LazyGrid
